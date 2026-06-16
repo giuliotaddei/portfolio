@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="it" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio di Giulio Taddei, Full-Stack Developer specializzato in Angular, Java e Spring."
+    />
+    <meta name="author" content="Giulio Taddei" />
+    <link rel="canonical" href="" />
+    <title>Portfolio — Giulio Taddei</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- PARTICLES -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- TOPBAR -->
+    <header id="topbar">
+      <span class="logo">&lt;dev/&gt;</span>
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#stack" data-i18n="nav.stack">Stack</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">Progetti</a></li>
+          <li>
+            <a href="#certifications" data-i18n="nav.certs">Certificazioni</a>
+          </li>
+          <li><a href="#experience" data-i18n="nav.exp">Esperienza</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contatti</a></li>
+        </ul>
+      </nav>
+      <div class="topbar-controls">
+        <!-- Language toggle -->
+        <button class="ctrl-btn" id="lang-btn" aria-label="Change language">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <line x1="2" y1="12" x2="22" y2="12" />
+            <path
+              d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+            />
+          </svg>
+          <span id="lang-label">EN</span>
+        </button>
+        <!-- Theme toggle -->
+        <button class="ctrl-btn" id="theme-btn" aria-label="Toggle theme">
+          <svg
+            id="icon-moon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+          <svg
+            id="icon-sun"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            style="display: none"
+          >
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <!-- HERO -->
+      <section id="hero">
+        <div class="hero-inner container">
+          <div class="hero-content">
+            <h1 class="hero-headline">
+              <span class="line" data-i18n="hero.line1">Ciao, sono</span>
+              <span class="line accent-word" id="typewriter-name"></span>
+              <span class="line" data-i18n="hero.line3"
+                >Full-Stack<span class="cursor"></span
+              ></span>
+            </h1>
+            <p class="hero-desc" data-i18n="hero.desc"></p>
+            <div class="hero-cta">
+              <a href="#projects" class="btn-primary">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path
+                    d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"
+                  />
+                  <polyline points="13 2 13 9 20 9" />
+                </svg>
+                <span data-i18n="hero.cta1">Vedi i progetti</span>
+              </a>
+              <a href="#contact" class="btn-ghost">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <span data-i18n="hero.cta2">Contattami</span>
+              </a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number">3<span>+</span></span>
+                <span class="stat-label" data-i18n="hero.stat1"
+                  >Anni di esperienza</span
+                >
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">1<span></span></span>
+                <span class="stat-label" data-i18n="hero.stat2"
+                  >Progetti personali completati</span
+                >
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">6<span>+</span></span>
+                <span class="stat-label" data-i18n="hero.stat3"
+                  >Certificazioni</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="avatar-ring">
+              <div class="avatar-img">
+                <img
+                  src="assets/immagine-profilo.JPG"
+                  alt="Foto profilo"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center top;
+                  "
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STACK -->
+      <section id="stack">
+        <div class="container reveal">
+          <p class="section-eyebrow" data-i18n="stack.eyebrow">// toolbox</p>
+          <h2 class="section-title" data-i18n="stack.title">
+            Il mio stack <span class="gradient-text">tecnologico</span>
+          </h2>
+          <p class="section-sub" data-i18n="stack.sub"></p>
+          <div class="divider"></div>
+          <div class="stack-grid" id="stack-grid"></div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <div class="container reveal">
+          <p class="section-eyebrow" data-i18n="projects.eyebrow">// work</p>
+          <h2 class="section-title" data-i18n="projects.title">
+            Progetti <span class="gradient-text">selezionati</span>
+          </h2>
+          <div class="divider"></div>
+          <div class="projects-grid" id="projects-grid"></div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS -->
+      <section id="certifications">
+        <div class="container reveal">
+          <p class="section-eyebrow" data-i18n="certs.eyebrow">
+            // credentials
+          </p>
+          <h2 class="section-title" data-i18n="certs.title">
+            Certificazioni <span class="gradient-text">& Riconoscimenti</span>
+          </h2>
+          <p class="section-sub" data-i18n="certs.sub"></p>
+          <div class="divider"></div>
+          <div class="certs-grid" id="certs-grid"></div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience">
+        <div class="container reveal">
+          <p class="section-eyebrow" data-i18n="exp.eyebrow">// career</p>
+          <h2 class="section-title" data-i18n="exp.title">
+            Percorso <span class="gradient-text">professionale</span>
+          </h2>
+          <p class="section-sub" data-i18n="exp.sub"></p>
+          <div class="divider"></div>
+          <div class="timeline" id="timeline"></div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="container reveal">
+          <p class="section-eyebrow" data-i18n="contact.eyebrow">
+            // get in touch
+          </p>
+          <h2 class="section-title" data-i18n="contact.title">
+            Parliamo di <span class="gradient-text">qualcosa</span>
+          </h2>
+          <p class="section-sub" data-i18n="contact.sub"></p>
+          <div class="divider"></div>
+          <div class="contact-grid">
+            <form class="contact-form" onsubmit="handleContact(event)">
+              <div class="input-group">
+                <label class="input-label" data-i18n="contact.name">NOME</label>
+                <input
+                  class="input-field"
+                  type="text"
+                  name="nome"
+                  placeholder="Mario Rossi"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <label class="input-label" data-i18n="contact.email"
+                  >EMAIL</label
+                >
+                <input
+                  class="input-field"
+                  type="email"
+                  name="email"
+                  placeholder="example@address.com"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <label class="input-label" data-i18n="contact.message"
+                  >MESSAGGIO</label
+                >
+                <textarea
+                  class="input-field"
+                  rows="5"
+                  placeholder="Message..."
+                  name="messaggio"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="btn-primary"
+                style="align-self: flex-start"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <line x1="22" y1="2" x2="11" y2="13" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg>
+                <span data-i18n="contact.send">Invia messaggio</span>
+              </button>
+            </form>
+            <div class="contact-info" id="contact-info"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <span data-i18n="footer.copy"
+        >Progettato &amp; sviluppato da Giulio Taddei — </span
+      ><span id="footer-year"></span>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
