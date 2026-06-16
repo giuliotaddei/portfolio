@@ -7,7 +7,7 @@ export const I18N = {
     "nav.contact": "Contatti",
     "hero.badge": "🟢 Disponibile per opportunità",
     "hero.line1": "Ciao, sono",
-    "hero.line3": "Developer",
+    "hero.line3": "Software Developer",
     "hero.desc":
       "Progetto e sviluppo applicazioni web moderne, performanti e scalabili, seguendo ogni fase del processo, dal database all'interfaccia utente.",
     "hero.cta1": "Vedi i progetti",
@@ -43,7 +43,7 @@ export const I18N = {
     "nav.contact": "Contact",
     "hero.badge": "🟢 Open to opportunities",
     "hero.line1": "Hi, I'm",
-    "hero.line3": "Developer",
+    "hero.line3": "Software Developer",
     "hero.desc":
       "I design and develop modern, high-performance, and scalable web applications, managing every stage of the process, from the database to the user interface.",
     "hero.cta1": "View projects",
